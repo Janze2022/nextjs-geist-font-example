@@ -1,0 +1,57 @@
+/* Basic Tailwind CSS import for styling */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for fixed navbar and topbar */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fixed-left-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #111;
+  color: white;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.fixed-topbar {
+  position: fixed;
+  top: 0;
+  left: 220px;
+  right: 0;
+  height: 60px;
+  background-color: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: flex-end;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.content-area {
+  margin-left: 220px;
+  margin-top: 60px;
+  padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fixed-left-navbar {
+    width: 60px;
+  }
+  .fixed-topbar {
+    left: 60px;
+  }
+  .content-area {
+    margin-left: 60px;
+  }
+}
